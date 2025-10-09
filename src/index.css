@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0D1520;
+  --uielements: #0D2847;
+  --border: #205D9E;
+  --text: #C2E6FF;
+}
+
+@font-face {
+  font-family: "Vipnagorgialla";
+  src: url('../src/assets/fonts/vipnagorgialla bd.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Techovier";
+  src: url('../src/assets/fonts/Techovier.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Honor";
+  src: url('../src/assets/fonts/Honor.ttf') format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background) ;
+}
