@@ -1,13 +1,13 @@
 import './App.css';
 
-import Header from './sections/Header';
 import Navbar from './sections/Navbar';
+import Present from './sections/Present';
 
 function App() {
   return (
     <>
       <Navbar />
-      <Header />
+      <Present />
     </>
   );
 }
