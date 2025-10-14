@@ -25,7 +25,7 @@ export default function Capacities() {
       <div className="mx-auto  px-6 text-center">
         {/* Titre */}
         <h2
-          className="text-4xl font-bold text-cyan-400 mb-8"
+          className="text-4xl font-bold mb-8"
           style={{
             fontFamily: "Vipnagorgialla",
             color: "var(--text)",

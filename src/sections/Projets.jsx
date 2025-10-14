@@ -20,7 +20,7 @@ export default function Projects() {
   return (
     <section id="projects-section" className="pt-8 pb-4 text-gray-200">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-4xl font-bold text-cyan-400 mb-8 text-center"
+        <h2 className="text-4xl font-bold mb-8 text-center"
           style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
           MES PROJETS
         </h2>
@@ -34,9 +34,9 @@ export default function Projects() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group relative rounded-xl overflow-hidden border border-cyan-500/15 bg-[#0b1d27]"
+              className="group relative rounded-xl overflow-hidden border border-cyan-500/15 bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
             >
-              <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[320px] object-cover transition duration-500 group-hover:scale-105" />
+              <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[320px] object-cover transition duration-200 group-hover:scale-105" />
 
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center
               bg-black/0 opacity-0 transition-all duration-500 ease-in-out group-hover:bg-black/80 group-hover:opacity-100">
