@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Kasa",
+    "pict": "/assets/images/logementsOne.png",
+    "hrefSite": "https://kasa-pi-nine.vercel.app",
+    "hrefGithub": "https://github.com/Matfen2/Kasa"
+  },
+  {
+    "id": 2,
+    "title": "Steam Deck Oled",
+    "pict": "/assets/images/steamDeckOledPage.png",
+    "hrefSite": "https://steam-deck-oled.netlify.app",
+    "hrefGithub": "https://github.com/Matfen2/steam-deck-oled"
+  }
+]

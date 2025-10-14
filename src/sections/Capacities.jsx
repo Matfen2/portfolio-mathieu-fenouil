@@ -21,7 +21,7 @@ const fadeRight = {
 
 export default function Capacities() {
   return (
-    <section id="capacities-section" className="pt-8 pb-16 text-gray-200">
+    <section id="capacities-section" className="pt-8 pb-4 text-gray-200">
       <div className="mx-auto  px-6 text-center">
         {/* Titre */}
         <h2
