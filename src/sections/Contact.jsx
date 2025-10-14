@@ -35,11 +35,6 @@ export default function Contact() {
       )
       .then(
         () => {
-          // 🔊 Lecture du son d’envoi
-          const sound = new Audio("/sounds/send.mp3");
-          sound.volume = 0.3;
-          sound.play();
-
           setAlert("✅ Message envoyé avec succès !");
           setFormData({ name: "", email: "", message: "" });
           setSent(true);
@@ -90,10 +85,7 @@ export default function Contact() {
       </style>
 
       <div className="max-w-4xl mx-auto mt-6 px-4 text-center relative z-10">
-        <h2
-          className="text-4xl font-bold text-cyan-400 mb-8"
-          style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}
-        >
+        <h2 className="text-4xl font-bold text-cyan-400 mb-8" style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
           CONTACT
         </h2>
 
@@ -110,42 +102,17 @@ export default function Contact() {
         )}
 
         {/* ✅ Formulaire */}
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-4 items-center border border-cyan-500/15 rounded-xl p-8 shadow-[0_0_25px_rgba(0,229,255,0.1)] relative"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Votre nom ou pseudo"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full md:w-3/4 p-3 bg-transparent border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]"
-          />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center border border-cyan-500/15 rounded-xl p-8 shadow-[0_0_25px_rgba(0,229,255,0.1)] relative">
+          <input type="text" name="name" placeholder="Votre nom ou pseudo" value={formData.name} onChange={handleChange}
+          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]" />
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Votre adresse email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full md:w-3/4 p-3 bg-transparent border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]"
-          />
+          <input type="email" name="email" placeholder="Votre adresse email" value={formData.email} onChange={handleChange}
+          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]" />
 
-          <textarea
-            name="message"
-            placeholder="Votre message..."
-            rows="5"
-            value={formData.message}
-            onChange={handleChange}
-            className="w-full md:w-3/4 p-3 bg-transparent border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)] resize-none"
-          />
+          <textarea name="message" placeholder="Votre message..." rows="5" value={formData.message} onChange={handleChange}
+          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)] resize-none" />
 
-          <button
-            type="submit"
-            className="mt-4 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-200 hover:bg-cyan-400 hover:text-[#071922] transition-all duration-300 font-semibold relative overflow-hidden"
-            style={{ fontFamily: 'Vipnagorgialla' }}
-          >
+          <button type="submit" className="mt-4 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-200 hover:bg-cyan-400 hover:text-[#071922] transition-all duration-300 font-semibold relative overflow-hidden" style={{ fontFamily: 'Vipnagorgialla' }}>
             <span className="relative z-10">Envoyer le message</span>
             <span className="absolute inset-0 bg-cyan-400/20 blur-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
           </button>

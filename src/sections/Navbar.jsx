@@ -1,50 +1,84 @@
-import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
-  const openClick = (value) => {
-    setIsOpen(value);
-  };
+  // Détection du scroll pour changer la couleur de fond
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Scrollspy : détecte la section visible
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // 60 % de la section visible
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  const navLinks = [
+    { id: "about", label: "Capacités" },
+    { id: "projects", label: "Projets" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
-    <nav className="bg-[var(--background)] text-[var(--text)] border-[var(--border)] fixed w-full top-0 z-50 shadow-md border-b-2" >
-      <div className=" mx-auto px-4 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <h1
-          className="text-lg sm:text-xl px-4 font-bold"
-          style={{ fontFamily: "Vipnagorgialla" }}
+    <nav
+      className={`transition-all duration-500 ease-in-out fixed w-full top-0 z-50 ${
+        scrolled
+          ? "bg-[#071922]/90 backdrop-blur-sm text-[var(--text)] border-cyan-400/20 shadow-[0_0_10px_rgba(0,229,255,0.15)]"
+          : "bg-transparent text-[var(--text)]"
+      }`}
+    >
+      <div className="mx-auto flex items-center justify-between py-4 px-8">
+        {/* Logo / Nom */}
+        <a
+          href="#home"
+          onClick={() => setActiveSection("")}
+          className="text-cyan-400 font-bold text-lg tracking-wider transition-all duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_12px_#00e5ff]"
         >
           Mathieu FENOUIL
-        </h1>
+        </a>
 
-        {/* Menu burger */}
-        <button
-          onClick={() => openClick(!isOpen)}
-          className="md:hidden text-2xl focus:outline-none"
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
-
-        {/* Links */}
-        <ul className={`md:flex md:space-x-8 items-center md:static absolute top-14 left-0 w-full md:w-auto bg-[var(--background)] transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"}`} style={{ border: "var(--border)"}}>
-          <li className="block px-4 py-2 text-center">
-            <a href="#capacities-section" className="transition-colors duration-300 text-xl ease-in-out hover:scale-105" style={{
-            color: "var(--text)", fontFamily: "Honor", letterSpacing: "1px", textDecoration: "none" }}>Capacités</a>
-          </li>
-          <li className="block px-4 py-2 text-center">
-            <a href="#projects-section" className="transition-colors duration-300 text-xl ease-in-out hover:scale-105" style={{
-            color: "var(--text)", fontFamily: "Honor", letterSpacing: "1px", textDecoration: "none" }}>Projets</a>
-          </li>
-          <li className="block px-4 py-2 text-center">
-            <a href="#contact-section" className="transition-colors duration-300 text-xl ease-in-out hover:scale-105" style={{
-            color: "var(--text)", fontFamily: "Honor", letterSpacing: "1px", textDecoration: "none" }}>Contact</a>
-          </li>
+        {/* Liens */}
+        <ul className="hidden md:flex space-x-10">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                href={`#${link.id}`}
+                className={`transition-all duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_14px_#00e5ff] ${
+                  activeSection === link.id
+                    ? "text-cyan-400 drop-shadow-[0_0_8px_#00e5ff]"
+                    : "text-[var(--text)]"
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

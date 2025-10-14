@@ -22,7 +22,7 @@ const fadeRight = {
 export default function Capacities() {
   return (
     <section id="capacities-section" className="pt-8 pb-4 text-gray-200">
-      <div className="mx-auto  px-6 text-center">
+      <div className="mx-auto px-6 text-center">
         {/* Titre */}
         <h2
           className="text-4xl font-bold mb-8"
@@ -104,27 +104,27 @@ export default function Capacities() {
           >
             {/* Esprit d’équipe */}
             <div className="rounded-lg w-72 p-4 items-center border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
                 Esprit d’équipe
               </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>
-                Collaborer avec designers et développeurs pour atteindre un objectif commun.
+              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.6px" }}>
+                Collaborer avec développeurs pour atteindre un objectif commun.
               </p>
             </div>
 
             {/* Créativité */}
             <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
                 Créativité
               </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>
+              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.6px" }}>
                 Inspiré par le gaming et le cinéma, j'aime concevoir des interfaces immersives.
               </p>
             </div>
 
             {/* Rigueur */}
             <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
                 Rigueur
               </h4>
               <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>
@@ -134,7 +134,7 @@ export default function Capacities() {
 
             {/* Curiosité */}
             <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
                 Curiosité
               </h4>
               <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>

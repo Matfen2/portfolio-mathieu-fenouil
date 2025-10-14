@@ -6,8 +6,7 @@ import PhotoMe from "../../src/assets/images/photoMe.jpg";
 const Present = () => {
   return (
     <section
-      id="about-section"
-      className="mt-28 py-12 md:py-8 bg-transparent text-[var(--text)]"
+      className="mt-28 py-12 md:py-8 text-[var(--text)]"
       aria-label="À propos de moi"
     >
       <div className="mx-auto w-full max-w-9xl px-4">
