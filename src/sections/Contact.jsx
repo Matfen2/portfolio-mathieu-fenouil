@@ -1,137 +1,121 @@
-import { useState } from "react";
-import { FaEnvelope, FaPhone, FaCheckCircle } from "react-icons/fa";
-import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { Mail, Phone } from "lucide-react";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-  const [alert, setAlert] = useState("");
-  const [sent, setSent] = useState(false);
-  const [showCheck, setShowCheck] = useState(false);
+  const form = useRef();
+  const [isSent, setIsSent] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
-      setAlert("⚠️ Veuillez remplir tous les champs !");
-      setTimeout(() => setAlert(""), 3000);
-      return;
-    }
-
     emailjs
-      .send(
-        "service_8jzgjp7", // Service ID
-        "template_868bj3n", // Template ID
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          message: formData.message,
-        },
-        "ppb_C3RYNt0Yrczm0" // Public Key
+      .sendForm(
+        "service_8jzgjp7", // Ton Service ID
+        "template_868bj3n", // Ton Template ID
+        form.current,
+        "ppb_C3RYNt0Yrczm0" // Ta Public Key
       )
       .then(
         () => {
-          setAlert("✅ Message envoyé avec succès !");
+          setIsSent(true);
           setFormData({ name: "", email: "", message: "" });
-          setSent(true);
-          setShowCheck(true);
-          setTimeout(() => {
-            setAlert("");
-            setSent(false);
-            setShowCheck(false);
-          }, 3000);
+          setTimeout(() => setIsSent(false), 4000);
         },
         (error) => {
-          console.error("FAILED...", error.text);
-          setAlert("❌ Une erreur est survenue, réessayez plus tard.");
-          setTimeout(() => setAlert(""), 3000);
+          console.error("Erreur lors de l'envoi :", error);
         }
       );
   };
 
   return (
     <section
-      id="contact-section"
-      className="pt-8 pb-4 text-gray-200 relative overflow-hidden"
+      id="contact"
+      className="pt-8 pb-4 bg-transparent text-[var(--text)] text-center"
     >
-      {/* ✅ Effet lumineux Tron */}
-      {sent && (
-        <div className="absolute inset-0 bg-cyan-400/10 blur-3xl animate-pulse"></div>
-      )}
+      <h2 className="text-4xl font-bold mb-8 text-center"
+          style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
+        CONTACT
+      </h2>
 
-      {/* ✅ Icône Check animée */}
-      {showCheck && (
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <FaCheckCircle
-            className="text-cyan-400 text-6xl animate-[tronPulse_1.2s_ease-in-out]"
-            style={{ filter: "drop-shadow(0 0 20px rgba(0,255,255,0.8))" }}
+      <p className="max-w-4xl mx-auto mb-7 text-gray-300 text-xl" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
+        Intéressé par mon profil ? N’hésitez pas à m’envoyer un message pour
+        discuter d’une collaboration ou d’une opportunité !
+      </p>
+
+      <div className="max-w-3xl mx-auto p-6 rounded-2xl border border-cyan-400/20 shadow-[0_0_20px_rgba(0,229,255,0.1)] backdrop-blur-sm">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col items-center space-y-6">
+          <input
+            type="text"
+            name="name"
+            placeholder="Votre nom ou pseudo"
+            value={formData.name}
+            onChange={handleChange}
+            required
+            className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]"
           />
-        </div>
-      )}
 
-      {/* ✅ Animation personnalisée */}
-      <style>
-        {`
-          @keyframes tronPulse {
-            0% { transform: scale(0.5); opacity: 0; }
-            50% { transform: scale(1.4); opacity: 1; }
-            100% { transform: scale(1); opacity: 0; }
-          }
-        `}
-      </style>
+          <input
+            type="email"
+            name="email"
+            placeholder="Votre adresse email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+            className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]"
+          />
 
-      <div className="max-w-4xl mx-auto mt-6 px-4 text-center relative z-10">
-        <h2 className="text-4xl font-bold text-cyan-400 mb-8" style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
-          CONTACT
-        </h2>
+          <textarea
+            name="message"
+            placeholder="Votre message..."
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+            required
+            className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)] resize-none"
+          />
 
-        <p className="text-lg mb-10 leading-relaxed text-gray-300">
-          Intéressé par mon profil ? N’hésitez pas à m’envoyer un message pour
-          discuter d’une collaboration ou d’une opportunité !
-        </p>
-
-        {/* ✅ Message d’alerte */}
-        {alert && (
-          <div className="mb-6 text-cyan-300 font-semibold border border-cyan-500/40 py-3 rounded-lg shadow-[0_0_20px_rgba(0,229,255,0.2)] transition-opacity duration-700">
-            {alert}
-          </div>
-        )}
-
-        {/* ✅ Formulaire */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 items-center border border-cyan-500/15 rounded-xl p-8 shadow-[0_0_25px_rgba(0,229,255,0.1)] relative">
-          <input type="text" name="name" placeholder="Votre nom ou pseudo" value={formData.name} onChange={handleChange}
-          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]" />
-
-          <input type="email" name="email" placeholder="Votre adresse email" value={formData.email} onChange={handleChange}
-          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)]" />
-
-          <textarea name="message" placeholder="Votre message..." rows="5" value={formData.message} onChange={handleChange}
-          className="w-full md:w-3/4 p-3 bg-transparent text-[var(--text)] placeholder-gray-400 border-b border-cyan-400 focus:outline-none focus:border-cyan-300 transition-all duration-300 focus:shadow-[0_0_10px_rgba(0,229,255,0.3)] resize-none" />
-
-          <button type="submit" className="mt-4 px-8 py-3 rounded-lg border border-cyan-400 text-cyan-200 hover:bg-cyan-400 hover:text-[#071922] transition-all duration-300 font-semibold relative overflow-hidden" style={{ fontFamily: 'Vipnagorgialla' }}>
-            <span className="relative z-10">Envoyer le message</span>
-            <span className="absolute inset-0 bg-cyan-400/20 blur-lg opacity-0 hover:opacity-100 transition-opacity duration-300"></span>
+          <button
+            type="submit"
+            style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}
+            className="mt-4 px-8 py-3 border border-cyan-400 rounded-lg text-cyan-400 font-semibold hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(0,229,255,0.5)] transition-all duration-300"
+          >
+            Envoyer le message
           </button>
+
+          {isSent && (
+            <p className="text-cyan-400 font-semibold animate-pulse mt-4">
+              ✅ Message envoyé avec succès !
+            </p>
+          )}
         </form>
-
-        {/* ✅ Coordonnées */}
-        <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-cyan-200">
-          <div className="flex items-center gap-2">
-            <FaPhone /> <span className="text-lg">06 05 15 24 23</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <FaEnvelope /> <span className="text-lg">matfen2.0@outlook.fr</span>
-          </div>
-        </div>
-
-        <p className="mt-10 text-sm text-gray-500">
-          © 2025 Mathieu FENOUIL, Tous droits réservés.
-        </p>
       </div>
+
+      {/* Coordonnées */}
+      <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-6 text-gray-300">
+        <div className="flex items-center gap-2">
+          <Phone className="text-cyan-400" size={28} />
+          <span style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>06 05 15 24 23</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <Mail className="text-cyan-400" size={28} />
+          <span style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>matfen2.0@outlook.fr</span>
+        </div>
+      </div>
+
+      <p className="text-md text-gray-500 mt-10" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
+        © 2025 Mathieu FENOUIL, Tous droits réservés.
+      </p>
     </section>
   );
 }

@@ -7,6 +7,7 @@
   --uielements: #0D2847;
   --border: #205D9E;
   --text: #C2E6FF;
+  --tron: rgba(0, 229, 255, 0.4);
 }
 
 @font-face {
@@ -34,23 +35,5 @@ body {
     background: var(--background) ;
 }
 
-/* Header */
-/* --- Effet machine à écrire sur le nom --- */
-.typewriter {
-  overflow: hidden;               
-  white-space: nowrap;
-  border-right: 3px solid var(--text); 
-  width: 0;
-  animation:
-    typing 1.2s steps(20, end) forwards,
-    blink 0.7s infinite;
-}
 
-@keyframes typing {
-  from { width: 0 }
-  to   { width: 86% }
-}
 
-@keyframes blink {
-  50% { border-color: transparent }
-}

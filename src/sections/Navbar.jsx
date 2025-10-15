@@ -30,7 +30,7 @@ export default function Navbar() {
           }
         });
       },
-      { threshold: 0.6 } // 60 % de la section visible
+      { threshold: 0.6 } 
     );
 
     sections.forEach((section) => observer.observe(section));

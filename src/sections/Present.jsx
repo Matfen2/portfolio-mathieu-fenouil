@@ -17,42 +17,29 @@ const Present = () => {
               src={PhotoMe}
               alt="Mathieu Fenouil"
               loading="lazy"
-              className=" w-full max-w-lg object-cover rounded-xl
-                         ring-1 ring-[var(--border)] shadow-[0_0_24px_rgba(0,229,255,.15)]"
-              style={{ aspectRatio: "4 / 3" }}
+              className=" w-full max-w-xl object-cover rounded-xl
+                        border shadow-[0_0_12px_rgba(0,229,255,0.1)]"
+              style={{ aspectRatio: "4 / 3", borderColor: "var(--tron)" }}
             />
           </div>
 
           {/* Texte + actions */}
-          <div className="lg:col-span-7 space-y-6">
-            <h2 className="typewriter text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider text-center" style={{ fontFamily: "Vipnagorgialla", color: "var(--text)" }}>
-              Mathieu FENOUIL
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <h2 className="typewriter mx-auto lg:mx-0 font-bold tracking-wider leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+            style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", display: "inline-block", maxWidth: "100%"}}>
+              <span className="typewriter-text">Mathieu FENOUIL</span>
             </h2>
-            <p
-              className="text-base sm:text-lg md:text-xl leading-relaxed tracking-wide"
-              style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}
-            >
-              <strong>Développeur JavaScript | React</strong>, rigoureux et passionné,
-              je conçois des interfaces <em>performantes</em> et <em>immersives</em> au
-              service des besoins clients.
-            </p>
-
-            <p
-              className="text-base sm:text-lg md:text-xl leading-relaxed tracking-wide"
-              style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}
-            >
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed tracking-wide max-w-3xl mx-auto lg:mx-0" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+            <strong>Développeur JavaScript | React</strong>, rigoureux et passionné, je conçois des interfaces <em>performantes</em> et <em>immersives</em> au service des besoins clients.</p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed tracking-wide max-w-3xl mx-auto lg:mx-0" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
               Actuellement au sein de la start-up{" "}
-              <a
-                className="underline decoration-[var(--border)] underline-offset-4 hover:text-white transition"
-                href="https://www.linkedin.com/company/daftlink/posts/?feedView=all"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className="underline decoration-[var(--tron)] underline-offset-4 hover:text-cyan-300 transition hover:scale-110 hover:drop-shadow-[0_0_2px_#00e5ff]" href="https://www.linkedin.com/company/daftlink/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
                 DaftLink
               </a>
               , où je perfectionne mes compétences en développement front-end, je souhaite
-              les enrichir davantage en rejoignant une entreprise axée sur la tech et le gaming,
-              afin de créer des expériences web toujours plus interactives et innovantes.
+              les enrichir davantage en rejoignant une entreprise axée sur la tech et le
+              gaming, afin de créer des expériences web toujours plus interactives et
+              innovantes.
             </p>
 
             {/* Actions */}

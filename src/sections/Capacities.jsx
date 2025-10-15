@@ -21,11 +21,11 @@ const fadeRight = {
 
 export default function Capacities() {
   return (
-    <section id="capacities-section" className="pt-8 pb-4 text-gray-200">
+    <section id="capacities-section" className="pt-12 pb-10 text-gray-200">
       <div className="mx-auto px-6 text-center">
         {/* Titre */}
         <h2
-          className="text-4xl font-bold mb-8"
+          className="text-3xl md:text-4xl font-bold mb-8"
           style={{
             fontFamily: "Vipnagorgialla",
             color: "var(--text)",
@@ -35,112 +35,95 @@ export default function Capacities() {
           Mes Capacités
         </h2>
 
-        {/* Conteneur principal CENTRÃ‰ */}
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
-          {/* --- GAUCHE : compÃ©tences techniques (2 par ligne) --- */}
+        {/* Conteneur principal responsive */}
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-20">
+          {/* --- GAUCHE : Compétences techniques --- */}
           <motion.div
             variants={fadeLeft}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-x-16 gap-y-10 justify-items-center"
+            className="grid grid-cols-2 sm:grid-cols-2 gap-x-10 gap-y-10 justify-items-center"
           >
-            {/* React */}
-            <motion.div
-              className="flex flex-col items-center"
-              variants={iconVariants}
-              initial="initial"
-              animate="pulse"
-              whileHover="hover"
-            >
-              <FaReact className="text-5xl text-cyan-400" />
-              <p className="mt-3 text-lg font-medium" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>React.js</p>
-            </motion.div>
-
-            {/* Node.js */}
-            <motion.div
-              className="flex flex-col items-center"
-              variants={iconVariants}
-              initial="initial"
-              animate="pulse"
-              whileHover="hover"
-            >
-              <FaNodeJs className="text-5xl text-green-400" />
-              <p className="mt-3 text-lg font-medium" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>Node.js</p>
-            </motion.div>
-
-            {/* Tailwind CSS */}
-            <motion.div
-              className="flex flex-col items-center"
-              variants={iconVariants}
-              initial="initial"
-              animate="pulse"
-              whileHover="hover"
-            >
-              <SiTailwindcss className="text-5xl text-sky-400" />
-              <p className="mt-3 text-lg font-medium" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>Tailwind CSS</p>
-            </motion.div>
-
-            {/* API REST */}
-            <motion.div
-              className="flex flex-col items-center"
-              variants={iconVariants}
-              initial="initial"
-              animate="pulse"
-              whileHover="hover"
-            >
-              <BiNetworkChart className="text-5xl text-cyan-300" />
-              <p className="mt-3 text-lg font-medium" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>API REST</p>
-            </motion.div>
+            {[
+              { Icon: FaReact, color: "text-cyan-400", label: "React.js" },
+              { Icon: FaNodeJs, color: "text-green-400", label: "Node.js" },
+              { Icon: SiTailwindcss, color: "text-sky-400", label: "Tailwind CSS" },
+              { Icon: BiNetworkChart, color: "text-cyan-300", label: "API REST" },
+            ].map(({ Icon, color, label }, i) => (
+              <motion.div
+                key={i}
+                className="flex flex-col items-center"
+                variants={iconVariants}
+                initial="initial"
+                animate="pulse"
+                whileHover="hover"
+              >
+                <Icon className={`text-5xl ${color}`} />
+                <p
+                  className="mt-3 text-lg font-medium"
+                  style={{
+                    fontFamily: "Honor",
+                    letterSpacing: "1.5px",
+                  }}
+                >
+                  {label}
+                </p>
+              </motion.div>
+            ))}
           </motion.div>
 
-          {/* --- DROITE : capacités humaines (4 en ligne) --- */}
+          {/* --- DROITE : Capacités humaines --- */}
           <motion.div
             variants={fadeRight}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="flex flex-nowrap justify-center items-stretch gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-nowrap justify-center items-stretch gap-6 md:gap-8"
           >
-            {/* Esprit d’équipe */}
-            <div className="rounded-lg w-72 p-4 items-center border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
-                Esprit d’équipe
-              </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.6px" }}>
-                Collaborer avec développeurs pour atteindre un objectif commun.
-              </p>
-            </div>
-
-            {/* Créativité */}
-            <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
-                Créativité
-              </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.6px" }}>
-                Inspiré par le gaming et le cinéma, j'aime concevoir des interfaces immersives.
-              </p>
-            </div>
-
-            {/* Rigueur */}
-            <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
-                Rigueur
-              </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>
-                Méthodique et attentif, je structure mon travail pour assurer la qualité du code.
-              </p>
-            </div>
-
-            {/* Curiosité */}
-            <div className="rounded-lg w-72 p-4 border border-[var(--border)] text-[var(--text)]">
-              <h4 className="text-cyan-300 text-lg font-semibold mb-2" style={{ fontFamily: "Honor", color: "var(--text)", letterSpacing: "4px"}}>
-                Curiosité
-              </h4>
-              <p className="text-gray-300 text-sm leading-relaxed" style={{ fontFamily: "Techovier", letterSpacing: "1.5px" }}>
-                En veille constante, j'explore les nouvelles technologies pour innover.
-              </p>
-            </div>
+            {[
+              {
+                title: "Esprit d’équipe",
+                text: "Collaborer avec designers et développeurs pour atteindre un objectif commun.",
+              },
+              {
+                title: "Créativité",
+                text: "Inspiré par le gaming et le cinéma, j’aime concevoir des interfaces immersives.",
+              },
+              {
+                title: "Rigueur",
+                text: "Méthodique et attentif, je structure mon travail pour assurer la qualité du code.",
+              },
+              {
+                title: "Curiosité",
+                text: "En veille constante, j’explore les nouvelles technologies pour innover.",
+              },
+            ].map(({ title, text }, i) => (
+              <div
+                key={i}
+                className="rounded-lg w-full sm:w-72 p-5 border shadow-[0_0_12px_rgba(0,229,255,0.1)] backdrop-blur-sm" style={{ borderColor: "var(--tron)"}}
+              >
+                <h4
+                  className="text-cyan-300 text-lg font-semibold mb-2"
+                  style={{
+                    fontFamily: "Honor",
+                    color: "var(--text)",
+                    letterSpacing: "3px",
+                  }}
+                >
+                  {title}
+                </h4>
+                <p
+                  className="text-gray-300 text-sm leading-relaxed"
+                  style={{
+                    fontFamily: "Techovier",
+                    letterSpacing: "1.6px",
+                  }}
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

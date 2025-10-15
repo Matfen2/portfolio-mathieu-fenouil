@@ -52,7 +52,7 @@ export default function Projects() {
                   </a>
                 </div>
 
-                <h3 className="text-xl font-semibold text-white" style={{ fontFamily: "Vipnagorgialla" }}>
+                <h3 className="text-2xl font-semibold text-white" style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
                   {p.title}
                 </h3>
               </div>
