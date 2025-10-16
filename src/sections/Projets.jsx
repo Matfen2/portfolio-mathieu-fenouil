@@ -34,7 +34,7 @@ export default function Projects() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group relative rounded-xl overflow-hidden border border-cyan-500/15 bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
+              className="group relative rounded-xl overflow-hidden border border-[var(--tron)] bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
             >
               <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[320px] object-cover transition duration-200 group-hover:scale-105" />
 

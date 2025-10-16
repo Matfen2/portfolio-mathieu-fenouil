@@ -129,7 +129,7 @@ export default function Capacities() {
                   },
                 },
               }}
-              className="rounded-lg w-full sm:w-72 md:w-80 lg:w-80 p-6 border border-cyan-500/30 bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
+              className="rounded-lg w-full sm:w-72 md:w-80 lg:w-80 p-6 border border-[var(--tron)] bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
               style={{ minHeight: "220px" }}
             >
               <h4
