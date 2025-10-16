@@ -40,7 +40,7 @@ export default function Contact() {
 
   return (
     <section
-      id="contact"
+      id="contact-section"
       className="pt-8 pb-4 bg-transparent text-[var(--text)] text-center"
     >
       <h2 className="text-4xl font-bold mb-8 text-center"

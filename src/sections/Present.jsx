@@ -91,7 +91,7 @@ export default function Present() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
-                         border border-cyan-500/40 bg-[#071922]/40 backdrop-blur-sm
+                         border border-[var(--tron)] bg-[#071922]/40 backdrop-blur-sm
                          shadow-[0_0_12px_rgba(0,229,255,0.2)] text-[var(--text)]
                          hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(0,229,255,0.5)]
                          hover:scale-105 transition-all duration-300"
