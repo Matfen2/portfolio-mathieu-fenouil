@@ -4,7 +4,7 @@
 
 Je suis **Mathieu Fenouil**, **Développeur Front-End JavaScript | React / Next.js**, passionné par le **web immersif**, la **création d’interfaces performantes et intuitives**, et l’univers du **gaming et de la tech**.  
 
-Actuellement à la recherche d’un **CDI** dans une **ESN** ou une **entreprise du secteur technologique / touristique**, je conçois des expériences web **fluides**, **dynamiques** et **visuellement engageantes**, inspirées d’univers comme *Tron* et la culture du jeu vidéo.  
+Actuellement à la recherche d’un **CDI** dans une **ESN** ou une **entreprise du secteur technologique**, je conçois des expériences web **fluides**, **dynamiques** et **visuellement engageantes**, inspirées d’univers comme *Tron* et la culture du jeu vidéo.  
 
 💡 J’aime concevoir des interfaces **immersives et réactives**, en plaçant **l’expérience utilisateur** au centre de mes priorités.
 
@@ -60,14 +60,6 @@ et continuer à évoluer dans le **développement front-end React/Next.js**, au 
 
 ---
 
-## 🪩 Aperçu du portfolio
-
-![screenshot du portfolio](https://portfolio-mathieu-fenouil.netlify.app/preview.png)
-
-*(Conçu avec React, Tailwind CSS et Framer Motion – effets “Tron Legacy”)*
-
----
-
 ## 🏁 Stack du projet
 
 - **Framework** : React.js + Vite  
@@ -88,4 +80,4 @@ git clone https://github.com/Matfen2/portfolio-mathieu-fenouil
 npm install
 
 # Lance le serveur local
-npm run dev
+npm start
