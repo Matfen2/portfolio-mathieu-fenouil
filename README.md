@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🌐 Portfolio – Mathieu Fenouil
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 À propos de moi
 
-## Available Scripts
+Je suis **Mathieu Fenouil**, **Développeur Front-End JavaScript | React / Next.js**, passionné par le **web immersif**, la **création d’interfaces performantes et intuitives**, et l’univers du **gaming et de la tech**.  
 
-In the project directory, you can run:
+Actuellement à la recherche d’un **CDI** dans une **ESN** ou une **entreprise du secteur technologique / touristique**, je conçois des expériences web **fluides**, **dynamiques** et **visuellement engageantes**, inspirées d’univers comme *Tron* et la culture du jeu vidéo.  
 
-### `npm start`
+💡 J’aime concevoir des interfaces **immersives et réactives**, en plaçant **l’expérience utilisateur** au centre de mes priorités.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧠 Compétences principales
 
-### `npm test`
+| Langages | Frameworks | Outils | Autres |
+|-----------|-------------|--------|--------|
+| HTML5 / CSS3 / JavaScript (ES6+) | React / Next.js / Tailwind CSS | Git / GitHub / VS Code / Chrome DevTools | API REST / Debug / Tests Jest |
+| Node.js (bases) | EmailJS / Framer Motion / Bootstrap | UX Design / Responsive Design |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🎨 Inspirations & philosophie
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> « Créer une interface, c’est raconter une histoire à travers le code. »
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Mon approche du développement repose sur **l’esthétique, la rigueur et la clarté du code**.  
+Je conçois chaque projet comme une **expérience immersive**, où **performance**, **lisibilité** et **originalité** se rencontrent.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🧩 Projets récents
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Steam Deck Oled** → Site démo dédié à la Steam Deck avec **Next / Tailwind / Materiel UI**
+- **Kasa** → Site de logement avec les bases de **React / Scss / Framer Motion**
+- **Portfolio Tron Legacy** → Mon site personnel en **React / Tailwind / Framer Motion**, intégrant **animations Tron** et **effets lumineux interactifs**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+👉 [Accéder au portfolio complet](https://portfolio-mathieu-fenouil.netlify.app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💬 Me contacter
 
-## Learn More
+📧 **Email** : [matfen2.0@outlook.fr](mailto:matfen2.0@outlook.fr)  
+💼 **LinkedIn** : [linkedin.com/in/mathieu-fenouil](https://www.linkedin.com/in/mathieu-fenouil)  
+💻 **GitHub** : [github.com/Matfen2](https://github.com/Matfen2)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ⚡ Fun fact
 
-### Code Splitting
+🎮 Fan de jeux immersifs comme *Prey (2017)*, *Dishonored*, *Deus Ex* et *Bioshock*, j’aime transposer cette **philosophie d’exploration et d’improvisation** dans le web :  
+> Chaque projet est un monde à explorer, chaque bug une énigme à résoudre.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🧭 Objectif 2025
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Rejoindre une équipe où **créativité**, **rigueur technique** et **innovation** se rejoignent —  
+et continuer à évoluer dans le **développement front-end React/Next.js**, au sein d’un environnement **humain et stimulant**.
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🪩 Aperçu du portfolio
 
-### Advanced Configuration
+![screenshot du portfolio](https://portfolio-mathieu-fenouil.netlify.app/preview.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+*(Conçu avec React, Tailwind CSS et Framer Motion – effets “Tron Legacy”)*
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🏁 Stack du projet
 
-### `npm run build` fails to minify
+- **Framework** : React.js + Vite  
+- **Design** : Tailwind CSS + Framer Motion  
+- **Backend (formulaire)** : EmailJS  
+- **Hébergement** : Netlify  
+- **Police principale** : Vipnagorgialla (inspiration TRON)  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🔧 Installation
+
+```bash
+# Clone le projet
+git clone https://github.com/Matfen2/portfolio-mathieu-fenouil
+
+# Installe les dépendances
+npm install
+
+# Lance le serveur local
+npm run dev
