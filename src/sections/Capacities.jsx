@@ -16,7 +16,7 @@ const fadeIn = {
 
 export default function Capacities() {
   return (
-    <section id="capacities-section" className="pt-12 pb-10 text-gray-200">
+    <section id="capacities-section" className="pb-10 text-gray-200">
       <div className="mx-auto px-6 text-center">
         {/* --- TITRE --- */}
         <h2

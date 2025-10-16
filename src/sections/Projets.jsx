@@ -18,7 +18,7 @@ const cardVariants = {
 
 export default function Projects() {
   return (
-    <section id="projects-section" className="pt-8 pb-4 text-gray-200">
+    <section id="projects-section" className="pt-8 pb-4 mb-7 text-gray-200">
       <div className="mx-auto max-w-6xl px-4">
         <h2 className="text-4xl font-bold mb-8 text-center"
           style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
