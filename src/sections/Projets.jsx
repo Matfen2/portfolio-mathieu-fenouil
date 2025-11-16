@@ -19,13 +19,13 @@ const cardVariants = {
 export default function Projects() {
   return (
     <section id="projects-section" className="pt-8 pb-4 mb-7 text-gray-200">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-full px-4">
         <h2 className="text-4xl font-bold mb-8 text-center"
           style={{ fontFamily: "Vipnagorgialla", color: "var(--text)", letterSpacing: "4px"}}>
           MES PROJETS
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {data.map((p, i) => (
             <motion.article
               key={p.id}
@@ -34,7 +34,7 @@ export default function Projects() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={cardVariants}
-              className="group relative rounded-xl overflow-hidden border border-[var(--tron)] bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
+              className="group relative cursor-pointer rounded-xl overflow-hidden border border-[var(--tron)] bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
             >
               <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[320px] object-cover transition duration-200 group-hover:scale-105" />
 

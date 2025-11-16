@@ -8,6 +8,13 @@
   },
   {
     "id": 2,
+    "title": "Argent Bank",
+    "pict": "/assets/images/argentBankPage.png",
+    "hrefSite": "https://argent-bank-brown.vercel.app/",
+    "hrefGithub": "https://github.com/Matfen2/Argent-Bank"
+  },
+  {
+    "id": 3,
     "title": "Steam Deck Oled",
     "pict": "/assets/images/steamDeckOledPage.png",
     "hrefSite": "https://steam-deck-oled.netlify.app",
