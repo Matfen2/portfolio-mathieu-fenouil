@@ -66,21 +66,18 @@ export default function Present() {
 
           <p className="text-base sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
             <span className="font-semibold text-cyan-300">
-              Développeur JavaScript | React
+              Développeur Full-Stack Junior
             </span>
             , rigoureux et passionné, je conçois des interfaces{" "}
             <span className="italic text-cyan-200/90">performantes</span> et{" "}
-            <span className="italic text-cyan-200/90">immersives</span> au
-            service des besoins clients.
+            <span className="italic text-cyan-200/90">accessibles</span> au
+            service des besoins utilisateurs.
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            Actuellement au sein de la start-up{" "}
-            <span className="text-cyan-300 font-semibold">DaftLink</span>, où je
-            perfectionne mes compétences en développement front-end, je souhaite
-            les enrichir davantage en rejoignant une entreprise axée sur la tech
-            et le gaming, afin de créer des expériences web toujours plus
-            interactives et innovantes.
+            Actuellement en <span className="text-cyan-300 font-semibold">recherche active d'un CDI</span> en région PACA, 
+            je souhaite rejoindre une équipe tech dynamique pour créer des 
+            expériences web innovantes et interactives.
           </p>
 
           {/* ==== BOUTONS ==== */}
