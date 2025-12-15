@@ -66,7 +66,7 @@ export default function Present() {
 
           <p className="text-base sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
             <span className="font-semibold text-cyan-300">
-              Développeur Full-Stack Junior
+              Développeur Full-Stack MERN
             </span>
             , rigoureux et passionné, je conçois des interfaces{" "}
             <span className="italic text-cyan-200/90">performantes</span> et{" "}
@@ -75,9 +75,9 @@ export default function Present() {
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            Actuellement en <span className="text-cyan-300 font-semibold">recherche active d'un CDI</span> en région PACA, 
-            je souhaite rejoindre une équipe tech dynamique pour créer des 
-            expériences web innovantes et interactives.
+            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 DevOps</span> ou CDI Développeur, 
+              je souhaite maîtriser le cycle complet : développement, déploiement. 
+              Mobile région PACA.
           </p>
 
           {/* ==== BOUTONS ==== */}
