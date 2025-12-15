@@ -68,10 +68,9 @@ export default function Present() {
             <span className="font-semibold text-cyan-300">
               Développeur Full-Stack MERN
             </span>
-            , rigoureux et passionné, je conçois des interfaces{" "}
+            , 3 ans d'expérience. Je conçois des applications{" "}
             <span className="italic text-cyan-200/90">performantes</span> et{" "}
-            <span className="italic text-cyan-200/90">accessibles</span> au
-            service des besoins utilisateurs.
+            <span className="italic text-cyan-200/90">sécurisées</span> de bout en bout.
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
