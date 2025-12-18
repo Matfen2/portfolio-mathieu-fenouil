@@ -192,7 +192,7 @@ export default function Contact() {
               color: "var(--text)",
             }}
           >
-            matfen2.0@outlook.fr
+            matfen3.05@gmail.com
           </span>
         </div>
       </motion.div>
