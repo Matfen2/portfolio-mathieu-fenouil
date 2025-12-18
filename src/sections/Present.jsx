@@ -68,15 +68,13 @@ export default function Present() {
             <span className="font-semibold text-cyan-300">
               Développeur Full-Stack MERN
             </span>
-            , 3 ans d'expérience. Je conçois des applications{" "}
+            , en poste chez DaftLink. Je conçois des applications{" "}
             <span className="italic text-cyan-200/90">performantes</span> et{" "}
             <span className="italic text-cyan-200/90">sécurisées</span> de bout en bout.
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 DevOps</span> ou CDI Développeur, 
-              je souhaite maîtriser le cycle complet : développement, déploiement. 
-              Mobile région PACA.
+            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 DevOps</span> pour maîtriser le cycle complet : développement, déploiement, automatisation. Mobilité région PACA
           </p>
 
           {/* ==== BOUTONS ==== */}

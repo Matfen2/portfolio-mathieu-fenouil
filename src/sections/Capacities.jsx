@@ -98,17 +98,17 @@ export default function Capacities() {
               text: "Habitué à collaborer avec des profils variés (designers, développeurs, créatifs), je privilégie toujours l’écoute et la fluidité dans le travail collectif.",
             },
             {
-              title: "Créativité",
+              title: "Persévérance",
               text: "Inspiré par le gaming et le cinéma, j’aime concevoir des interfaces immersives, visuelles et engageantes, où chaque détail compte.",
             },
             {
               title: "Rigueur & organisation",
-              text: "Je structure mon code et mes projets de façon claire et optimisée, pour garantir des sites performants, maintenables et cohérents.",
+              text: "Je structure mon code et mes projets de façon claire et optimisée, pour garantir des applications performantes et maintenables.",
             },
             {
               title: "Curiosité & apprentissage",
-              text: "Toujours à l’affût sur les nouvelles technologies, j’aime expérimenter pour améliorer mes outils et explorer les tendances du web moderne.",
-            },
+              text: "Toujours à l'affût des nouvelles technologies, j'ai su m'adapter rapidement de React à Vue.js chez DaftLink.",
+            }
           ].map(({ title, text }, i) => (
             <motion.div
               key={i}
