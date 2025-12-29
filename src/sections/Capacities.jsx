@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { FaReact, FaNodeJs, FaVuejs, FaDocker } from "react-icons/fa";
+import { SiTailwindcss, SiGithubactions } from "react-icons/si";
 import { BiNetworkChart } from "react-icons/bi";
+import { FaGitAlt } from "react-icons/fa";
 
 const iconVariants = {
   initial: { scale: 1, rotate: 0 },
@@ -38,11 +39,14 @@ export default function Capacities() {
           viewport={{ once: true }}
           className="flex justify-center mb-16"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-x-10 gap-y-8 mt-4 justify-items-center text-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
             {[
+              { Icon: FaVuejs, color: "text-green-400", label: "Vue.js" },
               { Icon: FaReact, color: "text-cyan-400", label: "React.js" },
-              { Icon: FaNodeJs, color: "text-green-400", label: "Node.js" },
-              { Icon: SiTailwindcss, color: "text-sky-400", label: "Tailwind CSS" },
+              { Icon: FaNodeJs, color: "text-green-500", label: "Node.js" },
+              { Icon: FaDocker, color: "text-blue-400", label: "Docker" },
+              { Icon: SiGithubactions, color: "text-white", label: "CI/CD" },
+              { Icon: SiTailwindcss, color: "text-sky-400", label: "Tailwind" },
               { Icon: BiNetworkChart, color: "text-cyan-300", label: "API REST" },
             ].map(({ Icon, color, label }, i) => (
               <motion.div
@@ -55,7 +59,7 @@ export default function Capacities() {
               >
                 <div className="relative group flex items-center justify-center">
                   <Icon
-                    className={`text-6xl sm:text-7xl md:text-8xl ${color} transition-transform duration-300 group-hover:scale-110`}
+                    className={`text-5xl sm:text-6xl md:text-7xl ${color} transition-transform duration-300 group-hover:scale-110`}
                   />
                   <div
                     className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"
@@ -63,7 +67,7 @@ export default function Capacities() {
                   ></div>
                 </div>
                 <p
-                  className="mt-2 text-sm sm:text-base md:text-lg font-medium"
+                  className="mt-2 text-xs sm:text-sm md:text-base font-medium"
                   style={{
                     fontFamily: "Honor",
                     letterSpacing: "1.8px",
@@ -94,12 +98,12 @@ export default function Capacities() {
         ">
           {[
             {
-              title: "Esprit d’équipe",
-              text: "Habitué à collaborer avec des profils variés (designers, développeurs, créatifs), je privilégie toujours l’écoute et la fluidité dans le travail collectif.",
+              title: "Esprit d'équipe",
+              text: "Habitué à collaborer avec des profils variés (designers, développeurs, créatifs), je privilégie toujours l'écoute et la fluidité dans le travail collectif.",
             },
             {
               title: "Persévérance",
-              text: "Inspiré par le gaming et le cinéma, j’aime concevoir des interfaces immersives, visuelles et engageantes, où chaque détail compte.",
+              text: "Autodidacte devenu développeur, j'ai appris que chaque obstacle est une opportunité d'apprentissage. Je ne lâche rien tant que le problème n'est pas résolu.",
             },
             {
               title: "Rigueur & organisation",

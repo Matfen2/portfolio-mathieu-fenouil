@@ -66,7 +66,7 @@ export default function Present() {
 
           <p className="text-base sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
             <span className="font-semibold text-cyan-300">
-              Développeur Full-Stack MERN
+              Développeur Full-Stack
             </span>
             , en poste chez DaftLink. Je conçois des applications{" "}
             <span className="italic text-cyan-200/90">performantes</span> et{" "}
@@ -74,7 +74,7 @@ export default function Present() {
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 DevOps</span> pour maîtriser le cycle complet : développement, déploiement, automatisation. Mobilité région PACA
+            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 Expert DevOps</span> pour maîtriser le cycle complet : développement, déploiement, automatisation. Mobilité région PACA
           </p>
 
           {/* ==== BOUTONS ==== */}
@@ -92,7 +92,7 @@ export default function Present() {
               style={{ fontFamily: 'Vipnagorgialla' }}
             >
               <FiGithub className="text-lg text-cyan-300" />
-              <span>Mon compte</span>
+              <span>GitHub</span>
             </a>
 
             {/* LinkedIn */}
@@ -108,7 +108,7 @@ export default function Present() {
               style={{ fontFamily: 'Vipnagorgialla' }}
             >
               <FaLinkedinIn className="text-lg text-cyan-300" />
-              <span>Mon compte</span>
+              <span>LinkedIn</span>
             </a>
 
             {/* CV */}
