@@ -74,7 +74,7 @@ export default function Present() {
           </p>
 
           <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 Expert DevOps</span> pour maîtriser le cycle complet : développement, déploiement, automatisation. Mobilité région PACA
+            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 Expert DevOps</span> pour maîtriser le cycle complet : développement, déploiement, automatisation. Mobilité France entière.
           </p>
 
           {/* ==== BOUTONS ==== */}
