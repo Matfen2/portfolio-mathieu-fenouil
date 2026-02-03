@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0D1520;
+  --border: #205D9E;
+  --text: #C2E6FF;
+  --tron: rgba(0, 229, 255, 0.4);
+}
+
+@font-face {
+  font-family: "Vipnagorgialla";
+  src: url('../src/assets/fonts/vipnagorgialla bd.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Techovier";
+  src: url('../src/assets/fonts/Techovier.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Honor";
+  src: url('../src/assets/fonts/Honor.ttf') format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background) ;
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    margin-right: -20px;
+  }
+}
+
+/* Pulsation Effect */
+@keyframes pulse-slow {
+  0%, 100% {
+    box-shadow: 
+      0 0 10px rgba(0, 229, 255, 0.3),
+      inset 0 0 8px rgba(0, 229, 255, 0.25);
+  }
+  50% {
+    box-shadow: 
+      0 0 18px rgba(0, 229, 255, 0.6),
+      inset 0 0 15px rgba(0, 229, 255, 0.3);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3.5s ease-in-out infinite;
+}
+
+/* === Lueur Tron au focus === */
+.input-glow:focus {
+  animation: glowLine 2s ease-in-out;
+}
+
+@keyframes glowLine {
+  0% { box-shadow: 0 0 6px rgba(0,229,255,0.3); }
+  50% { box-shadow: 0 0 14px rgba(0,229,255,0.6); }
+  100% { box-shadow: 0 0 6px rgba(0,229,255,0.3); }
+}
+
+
+
+
+
