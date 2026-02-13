@@ -114,7 +114,7 @@ export default function Present() {
 
             {/* CV Mathieu FENOUIL */}
             <a
-              href={CV} download="CV_Mathieu_FENOUIL_Software_Engineer.pdf"
+              href={CV} download="CV_Mathieu_FENOUIL.pdf"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
                          border border-[var(--tron)] bg-[#071922]/40 backdrop-blur-sm
                          shadow-[0_0_12px_rgba(0,229,255,0.2)] text-[var(--text)]
