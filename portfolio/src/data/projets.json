@@ -8,10 +8,10 @@
   },
   {
     "id": 2,
-    "title": "Premier Projet DevOps",
-    "pict": "/assets/images/premierProjetDevOps.png",
-    "hrefSite": "https://premier-projet-devops.vercel.app",
-    "hrefGithub": "https://github.com/Matfen2/first-project-devops"
+    "title": "TechPulse",
+    "pict": "/assets/images/TechpulsePage.png",
+    "hrefSite": "http://techpulse-portfolio.com",
+    "hrefGithub": "https://github.com/Matfen2/techpulse"
   },
   {
     "id": 3,
