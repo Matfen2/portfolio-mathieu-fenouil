@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Kasa",
-    "pict": "/assets/images/logementsOne.png",
-    "hrefSite": "https://kasa-pi-nine.vercel.app",
-    "hrefGithub": "https://github.com/Matfen2/Kasa"
+    "title": "Freello",
+    "pict": "/assets/images/Freello.png",
+    "hrefSite": "https://freello.site",
+    "hrefGithub": "https://github.com/Matfen2/freello"
   },
   {
     "id": 2,
