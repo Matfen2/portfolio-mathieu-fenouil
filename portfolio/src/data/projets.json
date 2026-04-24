@@ -15,9 +15,9 @@
   },
   {
     "id": 3,
-    "title": "Food Chief",
-    "pict": "/assets/images/foodChiefPage.png",
-    "hrefSite": "https://food-chief.vercel.app",
-    "hrefGithub": "https://github.com/Matfen2/food-chief"
+    "title": "FoodExpress",
+    "pict": "/assets/images/FoodExpress.png",
+    "hrefSite": "https://foodexpress-api-2xp2.onrender.com/swagger-ui/index.html",
+    "hrefGithub": "https://github.com/Matfen2/foodexpress"
   }
 ]
