@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn, FaDownload } from "react-icons/fa";
 import PhotoMe from "../../src/assets/images/photoMe.jpg"; 
-import CV from "../assets/MF_Developpeurfullstack.pdf";
+import CV from "../assets/CV_Mathieu_FENOUIL.pdf";
 
 // === Variants Framer Motion ===
 const fadeInImage = {
