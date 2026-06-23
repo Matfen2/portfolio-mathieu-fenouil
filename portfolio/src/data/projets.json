@@ -8,13 +8,6 @@
   },
   {
     "id": 2,
-    "title": "TechPulse",
-    "pict": "/assets/images/TechpulsePage.png",
-    "hrefSite": "http://techpulse-portfolio.com",
-    "hrefGithub": "https://github.com/Matfen2/techpulse"
-  },
-  {
-    "id": 3,
     "title": "FoodExpress",
     "pict": "/assets/images/FoodExpress.png",
     "hrefSite": "https://foodexpress-w7uq.onrender.com/swagger-ui/index.html",
