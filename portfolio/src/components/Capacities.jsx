@@ -61,7 +61,6 @@ export default function Capacities() {
           className="flex justify-center mb-16"
         >
           <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
-            // eslint-disable-next-line no-unused-vars, no-unused-vars
             {skills.map(({ Icon, color, label }, i) => (
               <motion.div
                 key={i}
