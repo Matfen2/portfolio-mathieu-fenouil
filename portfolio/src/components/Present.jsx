@@ -24,7 +24,7 @@ export default function Present() {
   return (
     <section
       id="present"
-      className="min-h-full flex flex-col justify-center items-center text-[var(--text)] pt-24 pb-20 lg:pb-22 px-6 bg-[var(--bg)]"
+      className="min-h-full flex flex-col justify-center items-center text-(--text) pt-24 pb-20 lg:pb-22 px-6 bg-(--bg)"
     >
       <div
         className="max-w-8xl w-full flex flex-col md:flex-col lg:flex-col xl:flex-row 
@@ -43,7 +43,7 @@ export default function Present() {
           <img
             src={PhotoMe}
             alt="Mathieu Fenouil"
-            className="rounded-xl border border-[var(--tron)]
+            className="rounded-xl border border-(--tron)
                        shadow-[0_0_25px_rgba(0,229,255,0.25)] 
                        w-full md:w-[36rem] lg:w-[42rem] xl:w-[42rem] 
                        object-cover"
@@ -70,12 +70,8 @@ export default function Present() {
               Développeur Full-Stack
             </span>
             , en poste chez DaftLink. Je conçois des applications{" "}
-            <span className="italic text-cyan-200/90">performantes</span> et{" "}
+            <span className="italic text-cyan-200/90">performantes, robustes, scalables</span> et{" "}
             <span className="italic text-cyan-200/90">sécurisées</span> de bout en bout.
-          </p>
-
-          <p className="text-sm sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
-            En <span className="text-cyan-300 font-semibold">recherche d'alternance Bac+5 Software Engineer (18 mois)</span> pour concevoir des applications robustes, scalables et sécurisées. Mobilité France entière.
           </p>
 
           {/* ==== BOUTONS ==== */}
@@ -86,8 +82,8 @@ export default function Present() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
-                         border border-[var(--tron)] bg-[#071922]/40 backdrop-blur-sm
-                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-[var(--text)]
+                         border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
+                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)
                          hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(0,229,255,0.5)]
                          hover:scale-105 transition-all duration-300"
               style={{ fontFamily: 'Vipnagorgialla' }}
@@ -102,8 +98,8 @@ export default function Present() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
-                         border border-[var(--tron)] bg-[#071922]/40 backdrop-blur-sm
-                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-[var(--text)]
+                         border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
+                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)
                          hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(0,229,255,0.5)]
                          hover:scale-105 transition-all duration-300"
               style={{ fontFamily: 'Vipnagorgialla' }}
@@ -116,8 +112,8 @@ export default function Present() {
             <a
               href={CV} download="CV_Software_Engineer.pdf"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
-                         border border-[var(--tron)] bg-[#071922]/40 backdrop-blur-sm
-                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-[var(--text)]
+                         border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
+                         shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)
                          hover:bg-cyan-500/20 hover:shadow-[0_0_20px_rgba(0,229,255,0.5)]
                          hover:scale-105 transition-all duration-300"
               style={{ fontFamily: 'Vipnagorgialla' }}

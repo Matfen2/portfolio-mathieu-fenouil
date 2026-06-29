@@ -1,17 +1,11 @@
 import { motion } from "framer-motion";
 import {
   FaReact,
-  FaNodeJs,
-  FaVuejs,
   FaDocker,
   FaJava,
-  FaGitAlt,
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss,
-  SiGithubactions,
-  SiTypescript,
   SiSpringboot,
   SiApachekafka,
   SiPostgresql,
@@ -45,6 +39,7 @@ export default function Capacities() {
   return (
     <section id="capacities-section" className="pb-10 text-gray-200">
       <div className="mx-auto px-6 text-center">
+
         {/* --- TITRE --- */}
         <h2
           className="text-3xl md:text-4xl font-bold mb-10"
@@ -65,7 +60,8 @@ export default function Capacities() {
           viewport={{ once: true }}
           className="flex justify-center mb-16"
         >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
+          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
+            // eslint-disable-next-line no-unused-vars, no-unused-vars
             {skills.map(({ Icon, color, label }, i) => (
               <motion.div
                 key={i}
@@ -85,7 +81,7 @@ export default function Capacities() {
                       background: "var(--tron)",
                       borderRadius: "50%",
                     }}
-                  ></div>
+                  />
                 </div>
                 <p
                   className="mt-2 text-xs sm:text-sm md:text-base font-medium"
@@ -110,13 +106,7 @@ export default function Capacities() {
           variants={{
             visible: { transition: { staggerChildren: 0.15 } },
           }}
-          className="
-          grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 
-          gap-y-8 sm:gap-y-6 md:gap-y-8 lg:gap-y-10
-          gap-x-6 sm:gap-x-8 md:gap-x-10 lg:gap-x-0 xl:gap-x-72
-          justify-items-center 
-          max-w-6xl lg:max-w-3xl xl:max-w-6xl mx-auto px-4 sm:px-8
-        "
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center max-w-6xl mx-auto px-4 sm:px-8"
         >
           {[
             {
@@ -133,7 +123,7 @@ export default function Capacities() {
             },
             {
               title: "Curiosité & apprentissage",
-              text: "Toujours à l'affût des nouvelles technologies, adaptation rapide (React → Vue.js).",
+              text: "Toujours à l'affût des nouvelles technologies, j'adapte rapidement ma stack aux besoins du projet.",
             },
           ].map(({ title, text }, i) => (
             <motion.div
@@ -147,7 +137,7 @@ export default function Capacities() {
                   transition: { duration: 0.8, ease: "easeOut" },
                 },
               }}
-              className="rounded-lg w-full sm:w-72 md:w-80 lg:w-80 p-6 border border-[var(--tron)] bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
+              className="rounded-lg w-full p-6 border border-(--tron) bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
             >
               <h4 className="text-cyan-300 text-lg font-semibold mb-3">
                 {title}
@@ -156,6 +146,7 @@ export default function Capacities() {
             </motion.div>
           ))}
         </motion.div>
+
       </div>
     </section>
   );
