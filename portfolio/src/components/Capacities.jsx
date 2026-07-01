@@ -85,7 +85,7 @@ export default function Capacities() {
                 <p
                   className="mt-2 text-xs sm:text-sm md:text-base font-medium"
                   style={{
-                    fontFamily: "Honor",
+                    fontFamily: 'Honor',
                     letterSpacing: "1.8px",
                     color: "var(--text)",
                   }}
@@ -105,7 +105,7 @@ export default function Capacities() {
           variants={{
             visible: { transition: { staggerChildren: 0.15 } },
           }}
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center max-w-6xl mx-auto px-4 sm:px-8"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center max-w-8xl mx-auto px-4 sm:px-8"
         >
           {[
             {
@@ -136,12 +136,12 @@ export default function Capacities() {
                   transition: { duration: 0.8, ease: "easeOut" },
                 },
               }}
-              className="rounded-lg w-full p-6 border border-(--tron) bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
+              className="rounded-lg w-full p-4 border border-(--tron) bg-[#071922]/40 shadow-[0_0_10px_rgba(0,229,255,0.1)] hover:shadow-[0_0_25px_rgba(0,229,255,0.3)] transition-all duration-300 flex flex-col justify-center text-center"
             >
-              <h4 className="text-cyan-300 text-lg font-semibold mb-3">
+              <h4 className="text-cyan-300 text-2xl font-semibold mb-3" style={{ fontFamily: 'Honor' }}>
                 {title}
               </h4>
-              <p className="text-gray-300 text-sm leading-relaxed">{text}</p>
+              <p className="text-gray-300 text-md leading-relaxed" style={{ fontFamily: 'Vipnagorgialla' }}>{text}</p>
             </motion.div>
           ))}
         </motion.div>
