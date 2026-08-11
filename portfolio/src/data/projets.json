@@ -3,14 +3,14 @@
     "id": 1,
     "title": "BookLoop",
     "pict": "/assets/images/BookLoop Swagger.png",
-    "hrefSite": "https://bookloop-api-ljka.onrender.com/api-docs/",
+    "hrefSite": "https://matfen2.github.io/bookloop-api/",
     "hrefGithub": "https://github.com/Matfen2/bookloop-api"
   },
   {
     "id": 2,
     "title": "FoodExpress",
     "pict": "/assets/images/FoodExpress.png",
-    "hrefSite": "https://foodexpress-w7uq.onrender.com/swagger-ui/index.html",
+    "hrefSite": "https://matfen2.github.io/foodexpress/",
     "hrefGithub": "https://github.com/Matfen2/foodexpress"
   }
 ]
