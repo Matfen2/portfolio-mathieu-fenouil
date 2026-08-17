@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn, FaDownload } from "react-icons/fa";
 import PhotoMe from "../../src/assets/images/photoMe.jpg"; 
-import CV from "../assets/CV_Développeur_FullStack_Mathieu_FENOUIL.pdf";
+import CV from "../assets/Mathieu FENOUIL - CV Développeur Full-Stack.pdf";
 
 // === Variants Framer Motion ===
 const fadeInImage = {
@@ -110,7 +110,7 @@ export default function Present() {
 
             {/* CV Mathieu FENOUIL */}
             <a
-              href={CV} download="CV_Développeur_FullStack_Mathieu_FENOUIL.pdf"
+              href={CV} download="Mathieu FENOUIL - CV Développeur Full-Stack.pdf.pdf"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
                          border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
                          shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)
