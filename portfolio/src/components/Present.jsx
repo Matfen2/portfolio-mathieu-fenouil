@@ -45,7 +45,7 @@ export default function Present() {
             alt="Mathieu Fenouil"
             className="rounded-xl border border-(--tron)
                        shadow-[0_0_25px_rgba(0,229,255,0.25)] 
-                       w-full md:w-[36rem] lg:w-[42rem] xl:w-[42rem] 
+                       w-full md:w-[36rem] lg:w-[42rem] xl:w-[32rem] 
                        object-cover"
           />
         </motion.div>
