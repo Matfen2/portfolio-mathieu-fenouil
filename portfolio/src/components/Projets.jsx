@@ -25,7 +25,7 @@ export default function Projects() {
           MES PROJETS
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
           {data.map((p, i) => (
             <motion.article
               key={p.id}
@@ -36,7 +36,7 @@ export default function Projects() {
               variants={cardVariants}
               className="group relative cursor-pointer rounded-xl overflow-hidden border border-(--tron) bg-[#0b1d27] hover:border-cyan-500/40 hover:shadow-[0_0_25px_rgba(0,229,255,0.1)]"
             >
-              <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[320px] object-cover transition duration-200 group-hover:scale-105" />
+              <img src={p.pict} alt={p.title} className="w-full h-[260px] md:h-[480px] object-cover transition duration-200 group-hover:scale-105" />
 
               <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center
               bg-black/0 opacity-0 transition-all duration-500 ease-in-out group-hover:bg-black/80 group-hover:opacity-100">
