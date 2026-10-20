@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 export default function Contact() {
   const form = useRef();
   const [isSent, setIsSent] = useState(false);
+  const [enCours, setEnCours] = useState(false);
+  const [erreur, setErreur] = useState(false);
   const [formData, setFormData] = useState({
     from_name: "",
     from_email: "",
@@ -20,6 +22,8 @@ export default function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setEnCours(true);
+    setErreur(false);
 
     emailjs
       .sendForm(
@@ -36,8 +40,10 @@ export default function Contact() {
         },
         (error) => {
           console.error("Erreur lors de l'envoi :", error);
+          setErreur(true);
         }
-      );
+      )
+      .finally(() => setEnCours(false));
   };
 
   return (
@@ -86,7 +92,7 @@ export default function Contact() {
             transition: { staggerChildren: 0.15, duration: 0.6, ease: "easeOut" },
           },
         }}
-        className="relative z-10 max-w-3xl xl:max-w-3xl md:max-w-xl sm:max-w-[100px] mx-auto p-8 rounded-2xl border border-[var(--tron)] 
+        className="relative z-10 w-full max-w-3xl mx-auto p-6 sm:p-8 rounded-2xl border border-[var(--tron)] 
                    shadow-[0_0_20px_rgba(0,229,255,0.1)] backdrop-blur-sm bg-[#071922]/40 space-y-6"
       >
         {/* Nom */}
@@ -142,15 +148,23 @@ export default function Contact() {
 
         {/* Bouton envoyer */}
         <motion.button
+          type="submit"
+          disabled={enCours}
           variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
-          className="mt-4 px-8 py-3 border border-cyan-400/50 rounded-full 
+          className="mt-4 disabled:opacity-50 disabled:cursor-wait px-8 py-3 border border-cyan-400/50 rounded-full 
                      text-cyan-400 font-semibold bg-[#071922]/60 
                      hover:bg-cyan-500/20 hover:shadow-[0_0_20px_#00e5ff]
                      hover:scale-105 transition-all duration-300"
           style={{ fontFamily: "Vipnagorgialla", letterSpacing: "3px" }}
         >
-          Envoyer le message
+          {enCours ? "Envoi en cours…" : "Envoyer le message"}
         </motion.button>
+
+        {erreur && (
+          <p className="text-red-400 font-semibold mt-4" role="alert">
+            L'envoi a échoué. Vous pouvez m'écrire directement à matfen3.05@gmail.com.
+          </p>
+        )}
 
         {isSent && (
           <motion.p
@@ -158,6 +172,7 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
             className="text-cyan-400 font-semibold mt-4 animate-pulse"
+            role="status"
           >
             ✅ Message envoyé avec succès !
           </motion.p>
@@ -173,7 +188,9 @@ export default function Contact() {
       >
         <div className="flex items-center gap-2">
           <Phone className="text-cyan-400" size={26} />
-          <span
+          <a
+            href="tel:+33605152423"
+            className="hover:text-cyan-300 transition-colors"
             style={{
               fontFamily: "Vipnagorgialla",
               letterSpacing: "3px",
@@ -181,11 +198,13 @@ export default function Contact() {
             }}
           >
             06 05 15 24 23
-          </span>
+          </a>
         </div>
         <div className="flex items-center gap-2">
           <Mail className="text-cyan-400" size={26} />
-          <span
+          <a
+            href="mailto:matfen3.05@gmail.com"
+            className="hover:text-cyan-300 transition-colors"
             style={{
               fontFamily: "Vipnagorgialla",
               letterSpacing: "3px",
@@ -193,7 +212,7 @@ export default function Contact() {
             }}
           >
             matfen3.05@gmail.com
-          </span>
+          </a>
         </div>
       </motion.div>
 
@@ -206,7 +225,7 @@ export default function Contact() {
           letterSpacing: "3px",
         }}
       >
-        © 2026 Mathieu FENOUIL — Tous droits réservés.
+        © 2026 Mathieu FENOUIL - Tous droits réservés.
       </p>
     </section>
   );

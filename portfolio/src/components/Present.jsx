@@ -67,11 +67,23 @@ export default function Present() {
 
           <p className="text-base sm:text-lg lg:text-xl lg:text-center leading-relaxed" style={{ fontFamily: "Honor", letterSpacing: "1.8px", color: "var(--text)"}}>
             <span className="font-semibold text-cyan-300">
-              Développeur Full-Stack
+              Développeur Full-Stack Java
             </span>
-            , en poste chez DaftLink. Je conçois des applications{" "}
-            <span className="italic text-cyan-200/90">performantes, robustes, scalables</span> et{" "}
-            <span className="italic text-cyan-200/90">sécurisées</span> de bout en bout.
+            {" "}· Spring Boot · Angular · React. Je conçois des applications{" "}
+            <span className="italic text-cyan-200/90">performantes, robustes, testées</span> et{" "}
+            <span className="italic text-cyan-200/90">déployées en continu</span>, de bout en bout.
+          </p>
+
+          {/* ==== DISPONIBILITÉ ==== */}
+          <p className="flex justify-center">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm -mt-4
+                         border border-emerald-400/50 bg-emerald-500/10 text-emerald-300"
+              style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+              Disponible pour un CDI en région PACA
+            </span>
           </p>
 
           {/* ==== BOUTONS ==== */}
@@ -94,7 +106,7 @@ export default function Present() {
 
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/in/mathieu-fenouil"
+              href="https://www.linkedin.com/in/mathieu-fenouil-d%C3%A9veloppeur-full-stack/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
@@ -110,7 +122,7 @@ export default function Present() {
 
             {/* CV Mathieu FENOUIL */}
             <a
-              href={CV} download="Mathieu FENOUIL - CV Développeur Full-Stack.pdf.pdf"
+              href={CV} download="Mathieu FENOUIL - CV Développeur Full-Stack.pdf"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
                          border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
                          shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)

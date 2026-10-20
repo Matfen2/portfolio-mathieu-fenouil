@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import {
   FaReact,
   FaDocker,
   FaJava,
+  FaAngular,
+  FaDatabase,
 } from "react-icons/fa";
 
 import {
@@ -30,9 +33,11 @@ export default function Capacities() {
   const skills = [
     { Icon: FaJava, color: "text-orange-500", label: "Java" },
     { Icon: SiSpringboot, color: "text-green-400", label: "Spring Boot" },
-    { Icon: SiApachekafka, color: "text-white", label: "Kafka" },
+    { Icon: FaAngular, color: "text-red-500", label: "Angular" },
     { Icon: FaReact, color: "text-cyan-400", label: "React" },
+    { Icon: FaDatabase, color: "text-red-400", label: "Oracle" },
     { Icon: SiPostgresql, color: "text-blue-500", label: "PostgreSQL" },
+    { Icon: SiApachekafka, color: "text-white", label: "Kafka" },
     { Icon: FaDocker, color: "text-blue-400", label: "Docker" },
   ];
 
@@ -60,7 +65,7 @@ export default function Capacities() {
           viewport={{ once: true }}
           className="flex justify-center mb-16"
         >
-          <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
+          <div className="grid grid-cols-4 lg:grid-cols-8 gap-x-6 sm:gap-x-8 gap-y-8 mt-4 justify-items-center text-center">
             {skills.map(({ Icon, color, label }, i) => (
               <motion.div
                 key={i}
@@ -72,7 +77,7 @@ export default function Capacities() {
               >
                 <div className="relative group flex items-center justify-center">
                   <Icon
-                    className={`text-5xl sm:text-6xl md:text-7xl ${color} transition-transform duration-300 group-hover:scale-110`}
+                    className={`text-4xl sm:text-6xl ${color} transition-transform duration-300 group-hover:scale-110`}
                   />
                   <div
                     className="absolute inset-0 blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500"

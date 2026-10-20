@@ -1,7 +1,48 @@
 [
   {
+    "id": 2,
+    "title": "MécaDétect",
+    "subtitle": "Suivi de maintenance industrielle",
+    "badge": "Projet personnel",
+    "description": "Un opérateur déclare une panne, le responsable l'affecte à un technicien habilité, le technicien la démarre puis la clôture depuis sa tablette. Mené comme un vrai projet, du cahier des charges à la mise en production, en 6 sprints.",
+    "chiffres": [
+      "372 tests automatisés, dont les parcours rejoués dans un navigateur avant chaque déploiement",
+      "Recherche optimisée de 480 ms à 7 ms sur 500 000 interventions",
+      "0 alerte SonarCloud, sauvegardes restaurées automatiquement chaque semaine"
+    ],
+    "stack": [
+      "Java 25",
+      "Spring Boot 4",
+      "Angular 21",
+      "Oracle 23",
+      "Docker",
+      "GitHub Actions",
+      "Oracle Cloud"
+    ],
+    "pict": "/assets/images/MécaDétect.png",
+    "hrefSite": "https://mecadetect.duckdns.org",
+    "hrefGithub": "https://github.com/Matfen2/mecadetect"
+  },
+  {
     "id": 1,
     "title": "JuriBook",
+    "subtitle": "Prise de rendez-vous avec des avocats",
+    "badge": "Projet personnel",
+    "description": "Un client trouve un avocat par spécialité et par ville, puis réserve un créneau en ligne. Architecture microservices event-driven, déployée sur Kubernetes.",
+    "chiffres": [
+      "6 microservices Java communiquant par Kafka, derrière une API Gateway",
+      "Infrastructure Kubernetes provisionnée avec Terraform",
+      "43 tests Cypress sur les parcours critiques"
+    ],
+    "stack": [
+      "Java 21",
+      "Spring Boot 4",
+      "React 19",
+      "Kafka",
+      "Kubernetes",
+      "Terraform",
+      "Scaleway"
+    ],
     "pict": "/assets/images/Juribook.png",
     "hrefSite": "https://juribook.fr",
     "hrefGithub": "https://github.com/Matfen2/juribook-frontend"
