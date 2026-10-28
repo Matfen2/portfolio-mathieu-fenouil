@@ -3,16 +3,18 @@
     "id": 2,
     "title": "MécaDétect",
     "subtitle": "Suivi de maintenance industrielle",
-    "badge": "Projet personnel",
-    "description": "Un opérateur déclare une panne, le responsable l'affecte à un technicien habilité, le technicien la démarre puis la clôture depuis sa tablette. Mené comme un vrai projet, du cahier des charges à la mise en production, en 6 sprints.",
+    "badge": "Projet personnel · non commercial",
+    "description": "Un opérateur déclare une panne, le responsable l'affecte à un technicien habilité, le technicien la démarre puis la clôture depuis sa tablette. L'administrateur importe tout le parc d'équipements depuis un fichier CSV. Organisé comme un projet d'entreprise, du cahier des charges que j'ai rédigé jusqu'à la mise en production, en 8 sprints.",
     "chiffres": [
-      "372 tests automatisés, dont les parcours rejoués dans un navigateur avant chaque déploiement",
+      "434 tests automatisés, dont les parcours rejoués dans un navigateur avant chaque déploiement",
+      "Import du parc par lots avec Spring Batch : une ligne invalide est écartée et expliquée, sans bloquer les autres",
       "Recherche optimisée de 480 ms à 7 ms sur 500 000 interventions",
       "0 alerte SonarCloud, sauvegardes restaurées automatiquement chaque semaine"
     ],
     "stack": [
       "Java 25",
       "Spring Boot 4",
+      "Spring Batch",
       "Angular 21",
       "Oracle 23",
       "Docker",
@@ -24,10 +26,33 @@
     "hrefGithub": "https://github.com/Matfen2/mecadetect"
   },
   {
+    "id": 3,
+    "title": "Migration Spring Boot",
+    "subtitle": "Java 11 / Spring Boot 2.7 → Java 17 / Spring Boot 3.5",
+    "badge": "Projet personnel · non commercial",
+    "description": "Une API de gestion du stock de pièces détachées, écrite comme on l'écrivait en 2021, migrée étape par étape sans changer son comportement. Un commit et un tag par étape : chaque changement se compare directement sur GitHub.",
+    "chiffres": [
+      "24 tests restés verts du début à la fin de la migration",
+      "2 changements de comportement révélés par les tests, invisibles à la compilation",
+      "javax → jakarta, Spring Security 6, Springfox remplacé par springdoc-openapi"
+    ],
+    "stack": [
+      "Java 17",
+      "Spring Boot 3.5",
+      "Spring Security 6",
+      "Hibernate 6",
+      "springdoc-openapi",
+      "JUnit 5"
+    ],
+    "pict": "/assets/images/Migration.png",
+    "hrefGithub": "https://github.com/Matfen2/migration-spring-boot",
+    "hrefCompare": "https://github.com/Matfen2/migration-spring-boot/compare/v0-java11-boot2...v2-java17-boot3"
+  },
+  {
     "id": 1,
     "title": "JuriBook",
     "subtitle": "Prise de rendez-vous avec des avocats",
-    "badge": "Projet personnel",
+    "badge": "Projet personnel · non commercial",
     "description": "Un client trouve un avocat par spécialité et par ville, puis réserve un créneau en ligne. Architecture microservices event-driven, déployée sur Kubernetes.",
     "chiffres": [
       "6 microservices Java communiquant par Kafka, derrière une API Gateway",

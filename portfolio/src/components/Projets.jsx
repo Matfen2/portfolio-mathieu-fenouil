@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiGlobe } from "react-icons/fi";
+import { FiGithub, FiGlobe, FiGitPullRequest } from "react-icons/fi";
 import data from "../data/projets.json";
 
 // Apparition douce, carte après carte
@@ -31,12 +31,17 @@ export default function Projects() {
           className="max-w-3xl mx-auto mb-10 text-center text-gray-300"
           style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}
         >
-          Projets personnels, conçus pour démontrer mes compétences techniques : chacun est mené comme
-          un vrai projet, jusqu'à la mise en production, avec une démo en ligne.
+          Des projets personnels, réalisés seul pendant ma recherche d'emploi pour me former et montrer
+          mes compétences. Je ne suis ni freelance ni à mon compte : aucun de ces projets n'a été commandé
+          ni payé par un client, et les démos utilisent des données fictives. Chacun est pourtant mené
+          avec la rigueur d'un projet d'entreprise : tests, code public et, pour les applications, démo en ligne.
         </p>
 
         <div className="flex flex-col gap-10">
-          {data.map((p, i) => (
+          {data.map((p, i) => {
+            // Un projet sans démo en ligne (la migration) renvoie vers son dépôt
+            const lienCapture = p.hrefSite ?? p.hrefGithub;
+            return (
             <motion.article
               key={p.id}
               custom={i}
@@ -51,11 +56,11 @@ export default function Projects() {
             >
               {/* ==== CAPTURE ==== */}
               <a
-                href={p.hrefSite}
+                href={lienCapture}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="lg:w-1/2 overflow-hidden bg-[#071922]"
-                aria-label={`Ouvrir la démo de ${p.title}`}
+                aria-label={p.hrefSite ? `Ouvrir la démo de ${p.title}` : `Ouvrir le code de ${p.title}`}
               >
                 <img
                   src={p.pict}
@@ -107,11 +112,20 @@ export default function Projects() {
                 </ul>
 
                 <div className="flex flex-wrap gap-4 pt-2 mt-auto">
-                  <a href={p.hrefSite} target="_blank" rel="noopener noreferrer" className={bouton}
-                     style={{ fontFamily: "Vipnagorgialla" }}>
-                    <FiGlobe className="text-lg text-cyan-300" />
-                    <span>Voir la démo</span>
-                  </a>
+                  {p.hrefSite && (
+                    <a href={p.hrefSite} target="_blank" rel="noopener noreferrer" className={bouton}
+                       style={{ fontFamily: "Vipnagorgialla" }}>
+                      <FiGlobe className="text-lg text-cyan-300" />
+                      <span>Voir la démo</span>
+                    </a>
+                  )}
+                  {p.hrefCompare && (
+                    <a href={p.hrefCompare} target="_blank" rel="noopener noreferrer" className={bouton}
+                       style={{ fontFamily: "Vipnagorgialla" }}>
+                      <FiGitPullRequest className="text-lg text-cyan-300" />
+                      <span>Avant / après</span>
+                    </a>
+                  )}
                   <a href={p.hrefGithub} target="_blank" rel="noopener noreferrer" className={bouton}
                      style={{ fontFamily: "Vipnagorgialla" }}>
                     <FiGithub className="text-lg text-cyan-300" />
@@ -120,7 +134,8 @@ export default function Projects() {
                 </div>
               </div>
             </motion.article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

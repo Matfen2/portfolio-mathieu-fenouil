@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn, FaDownload } from "react-icons/fa";
 import PhotoMe from "../../src/assets/images/photoMe.jpg"; 
-import CV from "../assets/Mathieu FENOUIL - CV Développeur Full-Stack.pdf";
+import CV from "../assets/CV_Mathieu_FENOUIL_Développeur_Java_Spring_Boot.pdf";
 
 // === Variants Framer Motion ===
 const fadeInImage = {
@@ -69,9 +69,16 @@ export default function Present() {
             <span className="font-semibold text-cyan-300">
               Développeur Full-Stack Java
             </span>
-            {" "}· Spring Boot · Angular · React. Je conçois des applications{" "}
+            {" "}· Spring Boot · Spring Batch · Angular. Je conçois des applications{" "}
             <span className="italic text-cyan-200/90">performantes, robustes, testées</span> et{" "}
             <span className="italic text-cyan-200/90">déployées en continu</span>, de bout en bout.
+          </p>
+
+          {/* ==== PARCOURS : situation claire dès le premier écran ==== */}
+          <p className="text-sm sm:text-base lg:text-center leading-relaxed text-gray-300" style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}>
+            Reconverti en 2024 après six ans dans l'audiovisuel, diplômé développeur (Bac+3, titre RNCP) en 2025,
+            je cherche mon <span className="font-semibold text-cyan-300">premier CDI de développeur</span>.
+            Les projets ci-dessous sont personnels : je les ai conçus seul pour progresser et montrer ce que je sais faire.
           </p>
 
           {/* ==== DISPONIBILITÉ ==== */}
@@ -82,7 +89,7 @@ export default function Present() {
               style={{ fontFamily: "Honor", letterSpacing: "1.5px" }}
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
-              Disponible pour un CDI en région PACA
+              Disponible immédiatement · CDI en région PACA
             </span>
           </p>
 
@@ -122,7 +129,7 @@ export default function Present() {
 
             {/* CV Mathieu FENOUIL */}
             <a
-              href={CV} download="Mathieu FENOUIL - CV Développeur Full-Stack.pdf"
+              href={CV} download="CV_Mathieu_FENOUIL_Développeur_Java_Spring_Boot.pdf"
               className="flex items-center gap-2 px-5 py-2 rounded-full 
                          border border-(--tron) bg-[#071922]/40 backdrop-blur-sm
                          shadow-[0_0_12px_rgba(0,229,255,0.2)] text-(--text)
